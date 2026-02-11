@@ -1,4 +1,10 @@
 {
+	"easycom": {
+	    "autoscan": true,
+	    "custom": {
+	      "^qiun-(.*)": "@qiun/ucharts/components/qiun-$1/qiun-$1.vue"
+	    }
+	  },
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
 			"path": "pages/login/login",
@@ -17,10 +23,101 @@
 			"path" : "pages/register/register",
 			"style" : 
 			{
-				"navigationBarTitleText" : ""
+				"navigationBarTitleText" : "注册"
 			}
-		}
+		},
+		{
+			"path" : "pages/index/index",
+			"style" : 
+			{
+				"navigationBarTitleText" : "首页"
+			}
+		},
+		{
+			"path" : "pages/checkin/checkin",
+			"style" : 
+			{
+				"navigationBarTitleText" : "签到日历表"
+			}
+		},
+		{
+			"path" : "pages/emotion/emotion",
+			"style" : 
+			{
+				"navigationBarTitleText" : "人脸情绪识别"
+			}
+		},
+		{
+			"path" : "pages/message/message",
+			"style" : 
+			{
+				"navigationBarTitleText" : "信息"
+			}
+		},
+		{
+			"path": "pages/profile/index",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/profile/edit",
+			"style" : 
+			{
+				"navigationBarTitleText" : "编辑"
+			}
+		},
+		// ========== 管理端页面 ==========
+		    {
+		      "path": "pages/admin/index/index",
+		      "style": {
+		        "navigationBarTitleText": "管理后台",
+		        "navigationStyle": "custom"
+		      }
+		    },{
+		      "path": "pages/admin/index/test",
+		      "style": {
+		        "navigationBarTitleText": "图表测试",
+		        "navigationStyle": "custom"
+		      }
+		    },
+		    {
+		      "path": "pages/admin/users/users",
+		      "style": {
+		        "navigationBarTitleText": "用户管理"
+		      }
+		    },
+		    {
+		      "path": "pages/admin/settings/settings",
+		      "style": {
+		        "navigationBarTitleText": "系统设置"
+		      }
+		    }
 	],
+	"tabBar": {
+			"color": "#999999",
+			"selectedColor": "#667eea",
+			"backgroundColor": "#ffffff",
+			"borderStyle": "black",
+			"list": [
+				{
+					"pagePath": "pages/index/index",
+					"text": "首页",
+					"iconPath": "/src/static/tabbar/shouye.png"
+				},
+				{
+					"pagePath": "pages/message/message",
+					"text": "信息",
+					"iconPath": "/src/static/tabbar/message.png"
+				},
+				{
+					"pagePath": "pages/profile/index",
+					"text": "我的",
+					"iconPath": "/src/static/tabbar/mine.png"
+				}
+			]
+		},
 	// 导航栏设置
 	"globalStyle": {
 		"navigationBarTextStyle": "shite",
